@@ -1,0 +1,420 @@
+
+
+mqtt:
+    sensor:
+    
+   #########################################
+   ###              DALY ROUTER          ###
+   #########################################
+   
+      - name: "bms router c1v"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_c1v
+        value_template: '{{value_json["V01"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+
+      - name: "bms router c2v"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_c2v
+        value_template: '{{value_json["V02"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+      
+      - name: "bms router c3v"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_c3v
+        value_template: '{{value_json["V03"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+
+      - name: "bms router c4v"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_c4v
+        value_template: '{{value_json["V04"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+      
+      - name: "bms router current"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_current
+        value_template: '{{value_json["current"] }}'
+        device_class: "current"
+        unit_of_measurement: "A"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+
+      - name: "bms router voltage"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_total_voltage
+        value_template: '{{value_json["total_voltage"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+
+      - name: "bms router SOC"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_SOC
+        value_template: '{{value_json["soc_percent"] }}'
+        unit_of_measurement: "%"
+        device_class: battery
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+      
+      - name: "bms router cell maxv"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_cmaxv
+        value_template: '{{value_json["highest_voltage"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+          
+      - name: "bms router cell maxn"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_cmaxn
+        value_template: '{{value_json["highest_cell"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"          
+                    
+      - name: "bms router cell minv"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_cminv
+        value_template: '{{value_json["lowest_voltage"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+          
+      - name: "bms router cell minn"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_cminn
+        value_template: '{{value_json["lowest_cell"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"          
+                                         
+      - name: "bms router temp 1"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_temp1
+        value_template: '{{value_json["highest_temperature"] }}'
+        device_class: "temperature"
+        unit_of_measurement: "°C"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                 
+      - name: "bms router temp 2"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_temp2
+        value_template: '{{value_json["lowest_temperature"] }}'
+        device_class: "temperature"
+        unit_of_measurement: "°C"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                          
+      - name: "bms router temp 3"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_temp3
+        value_template: '{{value_json["T01"] }}'
+        device_class: "temperature"
+        unit_of_measurement: "°C"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                          
+      - name: "bms router temp 4"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_temp4
+        value_template: '{{value_json["T02"] }}'
+        device_class: "temperature"
+        unit_of_measurement: "°C"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+           
+      - name: "bms router mode"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_mode
+        value_template: '{{value_json["mode"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"        
+                            
+      - name: "bms router charge enable"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_charge_enable
+        value_template: '{{value_json["charging_mosfet"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                  
+      - name: "bms router discharge enable"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_discharge_enable
+        value_template: '{{value_json["discharging_mosfet"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                                       
+      - name: "bms router Ah res"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_Ahres
+        value_template: '{{value_json["capacity_ah"] }}'
+        device_class: "energy_storage"
+        unit_of_measurement: "Ah"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                       
+      - name: "bms router charger running"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_charge_run
+        value_template: '{{value_json["charger_running"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                             
+      - name: "bms router load running"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_load_run
+        value_template: '{{value_json["load_running"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                             
+      - name: "bms router DI1"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_DI1
+        value_template: '{{value_json["DI1"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                             
+      - name: "bms router error"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_error
+        value_template: '{{value_json["error"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+           
+      - name: "bms router errors"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_errors
+        value_template: '{{value_json["errors"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+            
+      - name: "bms router timestamp"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_timestamp
+        value_template: '{{ (value_json["timestamp"] | int)| timestamp_local }}'
+        device_class: "timestamp"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                
+      - name: "bms router celle nr"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_nr_cell
+        value_template: '{{value_json["cells"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                          
+      - name: "bms router cell diffv"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_diffv
+        value_template: '{{value_json["volt_diff"] }}'
+        device_class: "voltage"
+        unit_of_measurement: "V"
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                    
+      - name: "bms router high sens T"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_HsensT
+        value_template: '{{value_json["highest_sensor"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                         
+      - name: "bms router low sens T"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_LsensT
+        value_template: '{{value_json["lowest_sensor"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                        
+      - name: "bms router T sens nr"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_TsensNr
+        value_template: '{{value_json["temperature_sensors"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                                    
+      - name: "bms router cycles"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_cycles
+        value_template: '{{value_json["cycles"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"   
+                                                                 
+      - name: "bms router B01 err"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_B01er
+        value_template: '{{value_json["B01"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S" 
+                                                                        
+      - name: "bms router B02 err"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_B02er
+        value_template: '{{value_json["B02"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                                        
+      - name: "bms router B03 err"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_B03er
+        value_template: '{{value_json["B03"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                                        
+      - name: "bms router B04 err"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_B04er
+        value_template: '{{value_json["B04"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                                              
+      - name: "bms router serial"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_serial
+        value_template: '{{value_json["bat_serial"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                                                   
+      - name: "bms router hardv"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_hardv
+        value_template: '{{value_json["bat_hard_v"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+                                                                                         
+      - name: "bms router softv"
+        state_topic: "D_H2.1_103E_30XF_12_240819_K00T_4/status"
+        unique_id: bms_router_softv
+        value_template: '{{value_json["bat_soft_v"] }}'
+        device:
+           identifiers: DalyBMS_router
+           manufacturer: "Daly"
+           name: DalyBMS_router
+           model: "4S"
+           
